@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>OOJS CONSTRUCTORS</title>
+</head>
+
+    <script>
+        
+        function Person(first, last, age, gender, interests) {
+        this.name = {
+                    first : first,
+                    last : last
+                    };
+                    this.age = age;
+                    this.gender = gender;
+                    this.interests = interests;
+                    this.bio = function() {
+                    console.log( ' I am ' + this.age + ' years old. I like ' + 
+                    this.interests[0] + ' and ' + this.interests[1] + '.');
+                    };
+                    this.greeting = function() {
+                    console.log('Hi! I am ' + this.name.first + ' ' + this.name.last);
+                    };
+                }
+        const person1 = new Person('Agilan','Venkatesan',23,'male',['playing badminton','listening to music!']);
+        person1.greeting();
+        person1.bio();
+        const person2 = Object.create(person1);
+        person2.greeting();
+        person2.bio();
+
+    </script>
+
+</html>
