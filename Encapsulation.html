@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>OOJS ENCAPSULATION</title>
+</head>
+<script>
+
+    var myobj = { 
+        name: "Agilan",
+        gender:"Male",
+        age:23
+    };
+
+    function Person() {};
+    Person.prototype.name="Agilan";
+    Person.prototype.gender="Male";
+    Person.prototype.age=23;
+
+    var myobj2=new Person();
+
+    function Person2(name,gender,age){
+        this.name=name;
+        this.gender=gender;
+        this.age=age;
+        
+    }
+
+    var myobj3=new Person2("Agilan","Male",23);
+    console.log(myobj.name);
+    console.log(myobj2.name);
+    console.log(myobj3.name);
+
+    </script>
+    </html>
