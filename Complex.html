@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>OOJS COMPLEX</title>
+</head>
+<script>
+
+(function home(){
+    console.log("Welcome to PVR Ticketing Machine");
+})();
+
+var tickets=[];
+var foodprice=[50,40,20];
+var ticket;
+var qty;
+var tot;
+var sno=[];
+var price=175;
+
+
+        function Ticket1(name,price,ticketrem,sno){
+            this.name = name;
+            this.price=price;
+            this.ticketrem=ticketrem;
+            this.sno=sno;
+           
+        }
+
+
+    function printtitle()
+    {
+                console.log("S.No " + "Movie " + "Price " + "TicketRemaining" );
+    }
+    function printnames()
+    {
+                console.log(this.sno + "    " + this.name + "  " + this.price + "  " + this.ticketrem + "  " );
+    }
+
+    function input()
+    {
+        for(var i=0;i<3;i++)
+        {
+            tickets[i]=60;
+            sno[i]=i+1;
+        }
+    
+    }
+    input();
+    printtitle.prototype = new Ticket1("Saahoo",price,tickets[0],sno[0]);
+    printnames.prototype = new printtitle();
+    const movie1 = new printnames();
+    printnames.prototype = new Ticket1("Mangal",price,tickets[1],sno[1]);
+    const movie2 = new printnames();
+    printnames.prototype = new Ticket1("Comali",price,tickets[2],sno[2]);
+    const movie3 = new printnames();
+
+    let ticketremain=(function customer(){
+
+        function ask() {
+            console.log("Please select Movie Name and No.of Ticket(s)");
+            
+        }
+        function reply() {
+            console.log("Movie: Saaho  Tickets: 8");       
+            ticket=8;    
+        }
+        return{
+            one:ask,
+            two: reply
+        };
+
+    })();
+
+    ticketremain.one();
+    ticketremain.two();
+function update()
+{
+    tickets[0]-=ticket;
+}
+update();
+(function welcome2(){
+    console.log("Please Select Something to Munch");
+})();
+
+function food(name,price,sno)
+{
+    this.name = name;
+    this.price=price;
+    this.sno=sno;
+
+}
+function printtitle1()
+    {
+                console.log("S.No " + "Commodity " + "Price ");
+    }
+function printnames1()
+    {
+                console.log(this.sno + "    " + this.name + "  " + this.price + "  ");
+    }
+
+    
+    printtitle1.prototype = new food("Popcorn",foodprice[0],1);
+    printnames1.prototype = new printtitle1();
+    const food1 = new printnames1();
+    printnames1.prototype = new food(" Coke  ",foodprice[1],2);
+    const food2 = new printnames1();
+    printnames1.prototype = new food(" Puff  ",foodprice[2],3);
+    const food3 = new printnames1();
+
+    let selection=(function customer(){
+
+function choose() {
+    console.log("Commodity:Popcorn Qty:2");
+    qty=2;
+}
+
+return{
+    one:choose,
+
+};
+
+})();
+
+selection.one();
+
+let total=(function customer(){
+
+function total1() {
+    tot= (ticket*price) + (qty*foodprice[0]);
+    }
+function display1(){
+    console.log("The Total Bill amount is Rs."+tot);
+}
+return{
+    one:total1,
+    two:display1
+
+};
+
+})();
+
+total.one();
+total.two();
+
+(function thanku(){
+    console.log("Thank You for Purchasing with us.Have a nice day!");
+})();
+
+(function home(){
+    console.log("Welcome to PVR Ticketing Machine");
+})();
+
+    printtitle.prototype = new Ticket1("Saahoo",price,tickets[0],sno[0]);
+    printnames.prototype = new printtitle();
+    const movie4 = new printnames();
+    printnames.prototype = new Ticket1("Mangal",price,tickets[1],sno[1]);
+    const movie5 = new printnames();
+    printnames.prototype = new Ticket1("Comali",price,tickets[2],sno[2]);
+    const movie6 = new printnames();
+
+
+
+</script>
+</html>
