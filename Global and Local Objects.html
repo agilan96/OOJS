@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>OOJS GLOBAL OBJECTS</title>
+</head>
+<script>
+
+    var name1="Hi i am Global variable and belong to window object";
+    console.log(window.name1);
+    let name2="Hi i am Global variable and don't belong to window object";
+    console.log(name2);
+    function Local()
+    {
+        this.name1="Hi i am Local variable";
+    }
+    const name=new Local();
+    console.log(name.name1);
+
+</script>
+</html>
+    
