@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>OOJS SCOPE AND CLOSURE</title>
+</head>
+<script>
+
+// global scope
+var e = 10;
+function sum(a){
+    //parent functions scope
+  return function(b){
+      //1st child functions scope
+    return function(c){
+      //2nd child functions scope
+      return function(d){
+        // local scope or 3rd child functions scope
+        return a + b + c + d + e; /*Since the 3rd child functions in innermost nested function, it forms a closure
+                                    over its parent functions and its variables*/
+      }
+    }
+  }
+}
+
+console.log(sum(1)(2)(3)(4)); // log 20
+
+</script>
+</html>
+
