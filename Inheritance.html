@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>OOJS INHERITANCE</title>
+</head>
+<script>
+
+function Person(first, age, gender, interests) {
+  this.name = {
+    first
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+};
+
+Person.prototype.greeting = function() {
+  console.log('Hi! I am ' + this.fathername + ' father of ' + this.name.first);
+};
+
+function Parent(first,age,gender,interests,fathername) {
+  Person.call(this,first,age,gender,interests);
+  this.fathername = fathername;
+}
+Parent.prototype = Object.create(Person.prototype);
+
+var teacher1 = new Parent('Agilan',23,'Male', ['playing cricket', 'listening to music!'],'Venkatesan');
+teacher1.greeting();
+</script>
+</html>
